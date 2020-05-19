@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
   <head>
 
     <link rel="stylesheet" href="styles.css">
@@ -166,10 +165,6 @@
         }
       }
 
-      Filter.propTypes = {
-        allMovies: React.PropTypes.array.isRequired,
-        handleTheFilter: React.PropTypes.func.isRequired
-      }
 
       class Option extends React.Component {
         render() {
@@ -179,9 +174,7 @@
           )
         }
       }
-      Option.propTypes = {
-        category : React.PropTypes.string.isRequired
-      }
+
 
       class Content extends React.Component {
         constructor(){
@@ -209,15 +202,7 @@
           return tabMovies;
         }
       }
-      
-      Content.propTypes = {
-        movies: React.PropTypes.array.isRequired,
-        category: React.PropTypes.string.isRequired,
-        handleRemoveMovie: React.PropTypes.func.isRequired,
-        handleLikeAndDislike: React.PropTypes.func.isRequired,
-        pagepick: React.PropTypes.number.isRequired,
-        page: React.PropTypes.number.isRequired,
-      }
+
 
       
       class Movie extends React.Component {
@@ -227,7 +212,7 @@
           return (
             <div className="col-3">
               <h2>{title}</h2>
-              <h4><span className="likes">{likes} likes </span>{" and "}<span className="dislikes">{dislikes} dislikes</span></h4>
+              <h4><span className="likes">{likes} likes </span>{" and "}<span className="dislikes">{dislikes} dislikes</span><span className="satisfaction"> <br/>{(likes / (likes + dislikes) * 100).toFixed(0)}% satisfaction</span></h4>
               <h3>{category}</h3>
               <p><button type="button" onClick={() => handleRemoveMovie(id, searchedCategory)}>DELETE MOVIE</button></p>
               <p><button id="likeBtn" className={(like === true) ? "liked" : (like === false) ? "disliked" : "like"}
@@ -236,12 +221,7 @@
           )
         }
       }
-      Movie.propTypes = {
-        movie: React.PropTypes.object.isRequired,
-        handleRemoveMovie: React.PropTypes.func.isRequired,
-        handleLikeAndDislike: React.PropTypes.func.isRequired,
-        searchedCategory: React.PropTypes.string.isRequired
-      }
+
 
       class Pagination extends React.Component {
         render(){
@@ -267,11 +247,7 @@
           )
         }
       }
-      Pagination.propTypes = {
-        pageUp : React.PropTypes.func.isRequired,
-        pageDown: React.PropTypes.func.isRequired,
-        getAmountNumber: React.PropTypes.func.isRequired
-      }
+
 
       ReactDOM.render(<App movies={movies} />, document.getElementById('react-container'));
 
