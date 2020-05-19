@@ -1,0 +1,140 @@
+
+* {
+    box-sizing: border-box;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.particeep{
+    background-color: white;
+}
+
+h1{
+    margin-left: 550px;
+    color: black;
+}
+
+h2{
+    font-size: 30px;
+    color:red
+}
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+    color: grey
+}
+
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row-center {
+  text-align: center;
+}
+
+label {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+select {
+  font-size: 20px
+}
+
+
+
+.row-center > div {
+  background-color: white;
+}
+.row-center > div {
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+
+}
+
+.header{
+  background-color: red;
+}
+
+.liked {
+  background-color: yellowgreen;
+}
+
+.disliked {
+  background-color: red;
+}
+.like {
+  background-color: grey;
+  color: white
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: red;
+    float: left;
+    padding: 12px 12px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 0.7px solid black;
+}
+
+.pagination a.active {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+button {
+    border: 1px solid;
+    border-radius: 120px;
+    padding: 10px;
+    background-color: #f44336;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+form {
+  text-align: center;
+  padding: 80px;
+}
+
+form > select {
+  font-weight: bold;
+}
+
+[class*="col-"] {
+    width: 100%;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
